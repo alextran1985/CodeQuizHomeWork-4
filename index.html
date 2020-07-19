@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE QUIZ</title>
+</head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="script" href="script.js">
+
+
+<body>
+    
+    <div class="jumbotron">
+        <h1 class="display-4">Code Quiz</h1>
+        <p class="lead">You will have 60 second to answer question on HTML,CSS & JavaScript.</p>
+        <hr class="my-4">
+        <p>Click start when you are ready to begin quiz.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Start</a>
+      
+        <br>
+        <br>
+        <br>
+        <h3 id="timer">:60</h3>
+    
+    </div>
+
+    
+</body>
+
+<script>
+
+ var allQuestion = [
+    {
+        questionText: "_ is the standard markup language for creating Web pages.",
+        answerA: "HTML",
+        answerB: "CSS",
+        answerC: "Javscript",
+        correctAns: "HTML"
+    },
+    {
+        questionText: "_ stands for Casscading Style Sheets",
+        answerA: "HTML",
+        answerB: "CSS",
+        answerC: "Javscript",
+        correctAns: "CSS"
+    },
+    {
+        questionText: "_ varibles are container for storin data values..",
+        answerA: "HTML",
+        answerB: "CSS",
+        answerC: "Javscript",
+        correctAns: "Javascript"
+    },
+]
+console.log(allQuestion[1].answerb)
+
+var counter = 0;
+var timeRemining = 60;
+
+function timerSetup (){
+    var timer = select('#timer');
+    timer.html('timeRemining-counter');
+
+    function countDown(){
+        counter++;
+        timer.html(timeRemining-counter);
+
+    }
+    setInterval(countDown, 1000)
+}
+
+</script>
+
+
+
+
+</html>
